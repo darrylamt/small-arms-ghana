@@ -131,7 +131,7 @@ function Navbar() {
         <IconButton
           color="inherit"
           edge="end"
-          sx={{ display: { xs: "block", md: "none" } }}
+          sx={{ display: { xs: "block", md: "none", marginRight: "16px" } }}
           onClick={toggleDrawer(true)}
         >
           <MenuIcon />
