@@ -39,7 +39,7 @@ function TopBar() {
               color="inherit"
               underline="hover"
             >
-              info@smallarmsghana.org
+              info@smallarmscommission.gov.gh
             </Link>
           </Typography>
         </Box>

@@ -66,7 +66,7 @@ function Navbar() {
               display: { xs: "none", sm: "block" },
             }}
           >
-            Small Arms Commission Ghana
+            Arms Commission
           </Typography>
         </Box>
         <Box sx={{ flexGrow: 1 }} />
@@ -140,9 +140,11 @@ function Navbar() {
           <Box
             sx={{
               width: 250,
-              backgroundColor: "#303030", // Dark background to match TopBar
+              backgroundColor: "rgba(48, 48, 48, 0.8)", // Dark background to match TopBar
+              backdropFilter: "blur(8px)",
               height: "100%",
               color: "white",
+              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.3)",
             }}
             role="presentation"
             onClick={toggleDrawer(false)}
