@@ -30,7 +30,9 @@ function Navbar() {
       sx={{
         padding: 0,
         margin: 0,
-        "& .MuiToolbar-root": { padding: 0, margin: 0 }, // Override Toolbar styles directly
+        width: "100%",
+        boxSizing: "border-box",
+        "& .MuiToolbar-root": { padding: 0, margin: 0 },
       }}
     >
       <Toolbar
@@ -39,6 +41,7 @@ function Navbar() {
           padding: 0,
           margin: 0,
           minWidth: 0,
+          width: "100%",
         }}
       >
         <Box

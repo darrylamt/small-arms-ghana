@@ -14,12 +14,14 @@ function TopBar() {
       sx={{
         backgroundColor: "#303030",
         color: "white",
-        display: { xs: "block", sm: "flex" }, // Stack on extra-small screens, flex on small and up
+        display: { xs: "block", sm: "flex" },
         justifyContent: "space-between",
-        alignItems: { xs: "flex-start", sm: "center" }, // Align to start on small screens
-        padding: { xs: "8px 16px", sm: "10px 24px" }, // Smaller padding on mobile
+        alignItems: { xs: "flex-start", sm: "center" },
+        padding: { xs: "8px 16px", sm: "10px 24px" },
         borderBottom: "1px solid #505050",
         boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
+        width: "100%",
+        boxSizing: "border-box",
       }}
     >
       <Box
