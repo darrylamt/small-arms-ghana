@@ -25,13 +25,34 @@ function Navbar() {
     setDrawerOpen(open);
   };
   return (
-    <AppBar position="static">
-      <Toolbar>
-        <Box sx={{ display: "flex", alignItems: "center" }}>
+    <AppBar
+      position="static"
+      sx={{
+        padding: 0,
+        margin: 0,
+        "& .MuiToolbar-root": { padding: 0, margin: 0 }, // Override Toolbar styles directly
+      }}
+    >
+      <Toolbar
+        disableGutters
+        sx={{
+          padding: 0,
+          margin: 0,
+          minWidth: 0,
+        }}
+      >
+        <Box
+          sx={{ display: "flex", alignItems: "center", margin: 0, padding: 0 }}
+        >
           <img
             src={logo}
             alt="Small Arms Commission Logo"
-            style={{ height: "80px", marginRight: "8px" }}
+            style={{
+              height: "80px",
+              marginRight: "8px",
+              marginLeft: 0,
+              padding: 0,
+            }}
           />
           <Typography
             variant="h6"
