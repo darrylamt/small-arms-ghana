@@ -36,7 +36,11 @@ function Navbar() {
           <Typography
             variant="h6"
             component="div"
-            sx={{ color: "white", fontWeight: "bold" }}
+            sx={{
+              color: "white",
+              fontWeight: "bold",
+              display: { xs: "none", sm: "block" },
+            }}
           >
             Small Arms Commission Ghana
           </Typography>
