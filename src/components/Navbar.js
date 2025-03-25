@@ -114,32 +114,112 @@ function Navbar() {
         </IconButton>
         <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer(false)}>
           <Box
-            sx={{ width: 250 }}
+            sx={{
+              width: 250,
+              backgroundColor: "#303030", // Dark background to match TopBar
+              height: "100%",
+              color: "white",
+            }}
             role="presentation"
             onClick={toggleDrawer(false)}
             onKeyDown={toggleDrawer(false)}
           >
+            <Box sx={{ p: 2, borderBottom: "1px solid #505050" }}>
+              <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+                Menu
+              </Typography>
+            </Box>
             <List>
-              <ListItem component={Link} to="/">
-                <ListItemText primary="Home" />
+              <ListItem
+                component={Link}
+                to="/"
+                sx={{
+                  py: 1.5,
+                  "&:hover": {
+                    backgroundColor: "#F72828", // Red on hover
+                    color: "white",
+                  },
+                }}
+              >
+                <ListItemText primary="Home" sx={{ color: "white" }} />
               </ListItem>
-              <ListItem component={Link} to="/about">
-                <ListItemText primary="About Us" />
+              <ListItem
+                component={Link}
+                to="/about"
+                sx={{
+                  py: 1.5,
+                  "&:hover": {
+                    backgroundColor: "#F72828",
+                    color: "white",
+                  },
+                }}
+              >
+                <ListItemText primary="About Us" sx={{ color: "white" }} />
               </ListItem>
-              <ListItem component={Link} to="/publications">
-                <ListItemText primary="Publications" />
+              <ListItem
+                component={Link}
+                to="/publications"
+                sx={{
+                  py: 1.5,
+                  "&:hover": {
+                    backgroundColor: "#F72828",
+                    color: "white",
+                  },
+                }}
+              >
+                <ListItemText primary="Publications" sx={{ color: "white" }} />
               </ListItem>
-              <ListItem component={Link} to="/news">
-                <ListItemText primary="News" />
+              <ListItem
+                component={Link}
+                to="/news"
+                sx={{
+                  py: 1.5,
+                  "&:hover": {
+                    backgroundColor: "#F72828",
+                    color: "white",
+                  },
+                }}
+              >
+                <ListItemText primary="News" sx={{ color: "white" }} />
               </ListItem>
-              <ListItem component={Link} to="/blog">
-                <ListItemText primary="Blog" />
+              <ListItem
+                component={Link}
+                to="/blog"
+                sx={{
+                  py: 1.5,
+                  "&:hover": {
+                    backgroundColor: "#F72828",
+                    color: "white",
+                  },
+                }}
+              >
+                <ListItemText primary="Blog" sx={{ color: "white" }} />
               </ListItem>
-              <ListItem component={Link} to="/resources">
-                <ListItemText primary="Resources" />
+              <ListItem
+                component={Link}
+                to="/resources"
+                sx={{
+                  py: 1.5,
+                  "&:hover": {
+                    backgroundColor: "#F72828",
+                    color: "white",
+                  },
+                }}
+              >
+                <ListItemText primary="Resources" sx={{ color: "white" }} />
               </ListItem>
-              <ListItem component={Link} to="/contact">
-                <ListItemText primary="Contact Us" />
+              <ListItem
+                component={Link}
+                to="/contact"
+                sx={{
+                  py: 1.5,
+                  "&:hover": {
+                    backgroundColor: "#F72828",
+                    color: "white",
+                  },
+                }}
+              >
+                <ListItemText primary="Contact Us" sx={{ color: "white" }} />
               </ListItem>
             </List>
           </Box>
