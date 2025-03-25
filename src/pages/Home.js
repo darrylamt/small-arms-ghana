@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Typography, Button } from "@mui/material";
 import { Link } from "react-router-dom";
+import Carousel from '../components/Carousel';
 
 function Home() {
   return (
@@ -8,40 +9,62 @@ function Home() {
       {/* Hero Section */}
       <Box
         sx={{
-          backgroundColor: "#F0FEF4", // Hint of Green from the style guide
-          height: "400px", // Adjust height as needed
+          backgroundColor: "#F0FEF4",
+          minHeight: "400px",
           display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
+          flexDirection: { xs: "column", md: "row" }, // Stack on mobile, row on desktop
           alignItems: "center",
-          textAlign: "center",
-          padding: "0 16px",
+          padding: { xs: "24px 16px", md: "40px 24px" },
+          gap: "24px",
         }}
       >
-        <Typography
-          variant="h2"
+        {/* Text Section */}
+        <Box
           sx={{
-            color: "#202020", // Darkest neutral for text
-            fontWeight: "bold",
-            mb: 2,
+            flex: 1,
+            textAlign: { xs: "center", md: "left" }, // Center on mobile, left on desktop
+            maxWidth: { md: "50%" },
           }}
         >
-          Empowering Peace: Responsible Arms Management
-        </Typography>
-        <Button
-          variant="contained"
-          component={Link}
-          to="/about"
+          <Typography
+            variant="h2"
+            sx={{
+              color: "#202020",
+              fontWeight: "bold",
+              mb: 2,
+              fontSize: { xs: "2rem", md: "3rem" }, // Smaller font on mobile
+            }}
+          >
+            Empowering Peace: Responsible Arms Management
+          </Typography>
+          <Button
+            variant="contained"
+            component={Link}
+            to="/about"
+            sx={{
+              backgroundColor: "#F72828",
+              color: "white",
+              "&:hover": {
+                backgroundColor: "#d62020",
+              },
+            }}
+          >
+            Learn More About Us
+          </Button>
+        </Box>
+
+        {/* Carousel Section */}
+        <Box
           sx={{
-            backgroundColor: "#F72828", // Red from the style guide
-            color: "white",
-            "&:hover": {
-              backgroundColor: "#d62020", // Slightly darker red on hover
-            },
+            flex: 1,
+            maxWidth: { md: "50%" },
+            height: "300px", // Adjust height as needed
+            overflow: "hidden",
+            borderRadius: "8px",
           }}
         >
-          Learn More About Us
-        </Button>
+          <Carousel />
+        </Box>
       </Box>
     </Box>
   );
